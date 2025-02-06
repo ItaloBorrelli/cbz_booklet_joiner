@@ -1,4 +1,3 @@
-import os
 import shutil
 import zipfile
 import argparse
@@ -7,10 +6,9 @@ from datetime import datetime
 from PIL import Image
 import re
 
-def create_timestamped_folder(base_path: str) -> Path:
-    """Creates a timestamped folder inside the given base path."""
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    folder_path = Path(base_path) / f"extracted_{timestamp}"
+def create_extracted_folder(base_path: str) -> Path:
+    """Creates a folder inside the given base path."""
+    folder_path = Path(base_path) / f"extracted"
     folder_path.mkdir(parents=True, exist_ok=True)
     return folder_path
 
@@ -151,7 +149,7 @@ def main():
         print(f"Error: Input directory '{args.input_dir}' does not exist or is not a directory.")
         return
     
-    output_dir = create_timestamped_folder(input_path)
+    output_dir = create_extracted_folder(input_path)
 
     for cbz_file in input_path.glob("*.cbz"):
         unzip_cbz(cbz_file, output_dir)

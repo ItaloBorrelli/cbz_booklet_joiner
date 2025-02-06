@@ -1,7 +1,6 @@
-from PIL import Image, ImageOps
+from PIL import Image
 import argparse
 from pathlib import Path
-from itertools import chain
 
 def create_blank_page(width: int, height: int) -> Image.Image:
     """Creates a plain white image of the given dimensions."""
