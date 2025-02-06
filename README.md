@@ -50,10 +50,6 @@ python3 cbz_processing.py --input-dir cbz
 | `--no-swap-01`      | Comma-separated CBZ names that should **keep** `_01` and `_00` unchanged. Use `none` to allow all swaps, or `all` to prevent all swaps. |
 | `--convert-format`  | Converts images to `jpg`, `png`, or `webp`. *(Default: `jpg`)* |
 
-### **Example Usage**
-
-Before running this script, ensure that your **start pages** and **end pages** are placed in the correct order within their respective folders.
-
 #### **Process CBZ files and convert to PNG**
 
 ```sh
@@ -76,7 +72,8 @@ Here’s how you can modify your README to include **Section 2 for organizing st
 
 ## **2️⃣ Organize Start and End Pages**
 
-Before creating a booklet, you need to **properly organize your start and end pages**.  
+Before creating a booklet, you need to **properly organize your start and end pages**.
+
 - Place **start pages** in the `start_pages/` folder in the order they should appear.  
 - Place **end pages** in the `end_pages/` folder in the order they should appear.  
 
@@ -151,7 +148,7 @@ The final processed files are located in:
 
 - `cbz/extracted/` – Processed images from CBZ files.
 - `cbz/extracted/booklets/` – Final booklet pages, paired and formatted.
-- `cbz/extracted/booklets/booklet.pdf` – The final printable PDF.
+- `cbz/extracted/booklet.pdf` – The final printable PDF.
 
 ---
 

@@ -12,7 +12,7 @@ def collect_booklet_images(processed_dir: Path, start_pages_dir: Path, end_pages
 
     # Load and sort start pages
     start_pages = sorted(
-        [img for img in start_pages_dir.glob("*") if img.suffix.lower() in {".jpg", ".png", ".webp"}]
+        [img for img in start_pages_dir.glob("*") if img.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}]
     )
     
     # Add start pages
@@ -26,13 +26,13 @@ def collect_booklet_images(processed_dir: Path, start_pages_dir: Path, end_pages
 
     # Load and sort processed pages
     processed_pages = sorted(
-        [img for img in processed_dir.glob("*") if img.suffix.lower() in {".jpg", ".png", ".webp"}]
+        [img for img in processed_dir.glob("*") if img.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}]
     )
     booklet_images.extend(processed_pages)
 
     # Load and sort end pages
     end_pages = sorted(
-        [img for img in end_pages_dir.glob("*") if img.suffix.lower() in {".jpg", ".png", ".webp"}]
+        [img for img in end_pages_dir.glob("*") if img.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}]
     )
 
     # Calculate total pages so far
@@ -65,7 +65,7 @@ def scale_and_save_images(input_dir: Path, output_dir: Path, target_width: int, 
     output_dir.mkdir(parents=True, exist_ok=True)  # Ensure output directory exists
 
     for img_file in sorted(input_dir.glob("*")):
-        if img_file.suffix.lower() in {".jpg", ".png", ".webp"}:
+        if img_file.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}:
             with Image.open(img_file) as img:
                 scaled_img = scale_image(img, target_width, target_height)
                 output_path = output_dir / img_file.name

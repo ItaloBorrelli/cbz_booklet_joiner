@@ -2,6 +2,7 @@
 cbz/
 **/*.cbz
 **/*.jpg
+**/*.jpeg
 **/*.png
 **/*.webp
 **/*.pdf
