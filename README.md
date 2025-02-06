@@ -65,8 +65,42 @@ python3 cbz_processing.py --input-dir cbz --no-swap-01 none --convert-format png
 - Converts **all extracted images** to PNG.
 
 ---
+### **Updated Sections for README**
 
-## **2️⃣ Create Printable Booklets**
+Here’s how you can modify your README to include **Section 2 for organizing start and end pages** and move booklet creation to **Section 3**:
+
+---
+
+```md
+---
+
+## **2️⃣ Organize Start and End Pages**
+
+Before creating a booklet, you need to **properly organize your start and end pages**.  
+- Place **start pages** in the `start_pages/` folder in the order they should appear.  
+- Place **end pages** in the `end_pages/` folder in the order they should appear.  
+
+### **Using `blank.png` for Custom Blank Pages**
+
+If you want to **intentionally add blank pages** at specific locations, you can **copy `blank.png`** into your `start_pages/` or `end_pages/` directory and rename it accordingly.
+
+#### **Example:**
+
+If you want a blank page between **two intro pages**, organize your `start_pages/` folder like this:
+
+```txt
+start_pages/
+├── 001_cover.png
+├── 002_intro.png
+├── 003_blank.png  # This will add an intentional blank page
+├── 004_intro_2.png
+```
+
+This allows for greater **control over booklet formatting** before the main content.
+
+---
+
+## **3️⃣ Create Printable Booklets**
 
 ### **Script:** `create_booklets.py`
 

@@ -1,6 +1,10 @@
+# Ignore all CBZ, JPG, PNG, WEBP, and PDF files
 cbz/
 **/*.cbz
 **/*.jpg
 **/*.png
 **/*.webp
 **/*.pdf
+
+# Exception: Do not ignore blank.png
+!blank.png
