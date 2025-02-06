@@ -95,6 +95,14 @@ start_pages/
 
 This allows for greater **control over booklet formatting** before the main content.
 
+### Size files with `convert.sh`
+
+This script is written for 1000x1500, but can be alterted for your manga page sizes. It will scale the page down to ?x1460, add a 5px black border then add a background to fill the 1000x1500 space. It requires `ImageMagick` to be installed, and is used by providing an input file, output file and a hex background colour. If no background colour is provided, white is used. Example:
+
+```bash
+./convert.sh input.jpg output.jpg "#FCABED" # Ensure quotations are used around the hex value, otherwise bash considers this a comment
+```
+
 ---
 
 ## **3️⃣ Create Printable Booklets**
