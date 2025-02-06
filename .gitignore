@@ -1,2 +1,6 @@
-*.cbz
-extracted/
+cbz/
+**/*.cbz
+**/*.jpg
+**/*.png
+**/*.webp
+**/*.pdf
